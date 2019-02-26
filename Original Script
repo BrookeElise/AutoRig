@@ -1,0 +1,221 @@
+from maya import cmds
+#auto rig revamp
+
+def joint_locators(*args):
+   #places locators
+    cmds.spaceLocator( name = 'Pelvis_Loc' );
+    cmds.move(0, 8.5, 0.2);
+    cmds.spaceLocator( name = 'Spine_A_Loc' );
+    cmds.move(0, 9.9, 0);
+    cmds.spaceLocator( name = 'Spine_B_Loc' );
+    cmds.move(0, 11.3, 0);
+    cmds.spaceLocator( name = 'Neck_Loc' );
+    cmds.move(0, 12.9, 0);
+    cmds.spaceLocator( name = 'Head_Loc' );
+    cmds.move(0, 14.4, 0);
+    cmds.spaceLocator( name = 'Head_End_Loc' );
+    cmds.move(0, 15.3, 0);
+    cmds.spaceLocator( name = 'Lt_Hip_Loc' );
+    cmds.move(0.8, 8.4, 0);
+    cmds.spaceLocator( name = 'Lt_Knee_Loc' );
+    cmds.move(0.8, 4.8, 0);
+    cmds.spaceLocator( name = 'Lt_Ankle_Loc' );
+    cmds.move(1.2, 1.1, -0.5);
+    cmds.spaceLocator( name = 'Lt_Foot_Loc' );
+    cmds.move(1.4, 0.2, 1.4);
+    cmds.spaceLocator( name = 'Lt_Clavicle_Loc' );
+    cmds.move(0.7, 12, 0.5);
+    cmds.spaceLocator( name = 'Lt_Shoulder_Loc' );
+    cmds.move(1.4, 12.7, -0.4);
+    cmds.spaceLocator( name = 'Lt_Elbow_Loc' );
+    cmds.move(2.6, 11, -0.6);
+    cmds.spaceLocator( name = 'Lt_Wrist_Loc' );
+    cmds.move(3.7, 9.3, -0.1);
+    cmds.spaceLocator( name = 'Lt_Thumb_Base_Loc' );
+    cmds.move(3.581, 9.071, 0.321);
+    cmds.spaceLocator( name = 'Lt_Thumb_A_Loc' );
+    cmds.move(3.555, 8.805, 0.463);
+    cmds.spaceLocator( name = 'Lt_Thumb_B_Loc' );
+    cmds.move(3.536, 8.454, 0.528);
+    cmds.spaceLocator( name = 'Lt_Thumb_End_Loc' );
+    cmds.move(3.572, 8.124, 0.505);
+    cmds.spaceLocator( name = 'Lt_Index_Base_Loc' );
+    cmds.move(4.241, 8.585, 0.456);
+    cmds.spaceLocator( name = 'Lt_Index_A_Loc' );
+    cmds.move(4.362, 8.361, 0.509);
+    cmds.spaceLocator( name = 'Lt_Index_B_Loc' );
+    cmds.move(4.382, 8.011, 0.479);
+    cmds.spaceLocator( name = 'Lt_Index_End_Loc' );
+    cmds.move(4.405, 7.781, 0.457);
+    cmds.spaceLocator( name = 'Lt_Mid_Base_Loc' );
+    cmds.move(4.382, 8.612, 0.219);
+    cmds.spaceLocator( name = 'Lt_Mid_A_Loc' );
+    cmds.move(4.474, 8.345, 0.198);
+    cmds.spaceLocator( name = 'Lt_Mid_B_Loc' );
+    cmds.move(4.496, 7.987, 0.162);
+    cmds.spaceLocator( name = 'Lt_Mid_End_Loc' );
+    cmds.move(4.414, 7.746, 0.118);
+    cmds.spaceLocator( name = 'Lt_Ring_Base_Loc' );
+    cmds.move(4.422, 8.668, -0.053);
+    cmds.spaceLocator( name = 'Lt_Ring_A_Loc' );
+    cmds.move(4.532, 8.417, -0.082);
+    cmds.spaceLocator( name = 'Lt_Ring_B_Loc' );
+    cmds.move(4.474, 8.060, -0.131);
+    cmds.spaceLocator( name = 'Lt_Ring_End_Loc' );
+    cmds.move(4.437, 7.843, -0.148);
+    cmds.spaceLocator( name = 'Lt_Pinky_Base_Loc' );
+    cmds.move(4.387, 8.729, -0.303);
+    cmds.spaceLocator( name = 'Lt_Pinky_A_Loc' );
+    cmds.move(4.382, 8.388, -0.365);
+    cmds.spaceLocator( name = 'Lt_Pinky_B_Loc' );
+    cmds.move(4.314, 8.166, -0.389);
+    cmds.spaceLocator( name = 'Lt_Pinky_End_Loc' );
+    cmds.move(4.216, 8.014, -0.406);
+
+jointLocators = ['Pelvis_Loc', 'Spine_A_Loc', 'Spine_B_Loc', 'Neck_Loc', 'Head_Loc', 'Head_End_Loc', 'Lt_Hip_Loc', 'Lt_Knee_Loc', 'Lt_Ankle_Loc', 'Lt_Foot_Loc', 'Lt_Clavicle_Loc', 'Lt_Shoulder_Loc', 'Lt_Elbow_Loc', 'Lt_Wrist_Loc', 'Lt_Thumb_Base_Loc',
+'Lt_Thumb_A_Loc', 'Lt_Thumb_B_Loc', 'Lt_Thumb_End_Loc', 'Lt_Index_Base_Loc', 'Lt_Index_A_Loc', 'Lt_Index_B_Loc', 'Lt_Index_End_Loc', 'Lt_Mid_Base_Loc', 'Lt_Mid_A_Loc', 'Lt_Mid_B_Loc', 'Lt_Mid_End_Loc', 'Lt_Ring_Base_Loc', 'Lt_Ring_A_Loc', 'Lt_Ring_B_Loc',
+'Lt_Ring_End_Loc', 'Lt_Pinky_Base_Loc', 'Lt_Pinky_A_Loc', 'Lt_Pinky_B_Loc', 'Lt_Pinky_End_Loc']
+
+
+midJoints = ['Head_End', 'Head', 'Neck', 'Spine_B', 'Spine_A', 'Pelvis']
+ltLegJoints = ['Lt_Foot', 'Lt_Ankle', 'Lt_Knee', 'Lt_Hip']
+ltArmJoints = ['Lt_Wrist', 'Lt_Elbow', 'Lt_Shoulder', 'Lt_Clavicle']
+ltThumbJoints = ['Lt_Thumb_End', 'Lt_Thumb_B', 'Lt_Thumb_A', 'Lt_Thumb_Base']
+ltIndexJoints = ['Lt_Index_End', 'Lt_Index_B', 'Lt_Index_A', 'Lt_Index_Base']
+ltMidJoints = ['Lt_Mid_End', 'Lt_Mid_B', 'Lt_Mid_A', 'Lt_Mid_Base']
+ltRingJoints = ['Lt_Ring_End', 'Lt_Ring_B', 'Lt_Ring_A', 'Lt_Ring_Base']
+ltPinkyJoints = ['Lt_Pinky_End', 'Lt_Pinky_B', 'Lt_Pinky_A', 'Lt_Pinky_Base']
+
+
+#places joints at position of locators, names them properly, removes locators
+def loc_children(*args):
+    for locs in (jointLocators):
+        cmds.select();
+        cmds.joint(rad = 0.3, name = locs[:-4]);
+        cmds.select(locs, toggle = True);
+        cmds.parent(r = True);
+        cmds.parent(world = True);
+        cmds.select(clear = True);
+        cmds.delete(locs);
+    
+    #parents items in lists properly
+    for j in range(0, (len(midJoints) - 1)):
+        cmds.select(midJoints [j]);
+        cmds.select(midJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltLegJoints) - 1)):
+        cmds.select(ltLegJoints [j]);
+        cmds.select(ltLegJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltArmJoints) - 1)):
+        cmds.select(ltArmJoints [j]);
+        cmds.select(ltArmJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltThumbJoints) - 1)):
+        cmds.select(ltThumbJoints [j]);
+        cmds.select(ltThumbJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltIndexJoints) - 1)):
+        cmds.select(ltIndexJoints [j]);
+        cmds.select(ltIndexJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltMidJoints) - 1)):
+        cmds.select(ltMidJoints [j]);
+        cmds.select(ltMidJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltRingJoints) - 1)):
+        cmds.select(ltRingJoints [j]);
+        cmds.select(ltRingJoints [j + 1], toggle = True);
+        cmds.parent();
+        
+    for j in range(0, (len(ltPinkyJoints) - 1)):
+        cmds.select(ltPinkyJoints [j]);
+        cmds.select(ltPinkyJoints [j + 1], toggle = True);
+        cmds.parent();
+    
+    #orient joints    
+    cmds.select('Lt_Index_Base', 'Lt_Mid_Base', 'Lt_Ring_Base', 'Lt_Pinky_Base');
+    cmds.joint(e = True, oj = 'xyz', secondaryAxisOrient = 'xup', children = True, zso = True );
+    
+    cmds.select('Lt_Clavicle', 'Lt_Hip', 'Lt_Thumb_Base');
+    cmds.joint(e = True, oj = 'xyz', secondaryAxisOrient = 'zup', children = True, zso = True);
+    cmds.select('Pelvis');
+    cmds.joint(e = True, oj = 'xyz', secondaryAxisOrient = 'yup', children = True, zso = True);
+    cmds.select('Lt_Thumb_Base', 'Lt_Index_Base', 'Lt_Mid_Base', 'Lt_Ring_Base', 'Lt_Pinky_Base', 'Lt_Wrist');
+    cmds.parent();
+    cmds.select('Lt_Clavicle');
+    #parents remaining joints and mirrors them 
+    cmds.select('Lt_Clavicle', 'Spine_B');
+    cmds.parent();
+    cmds.mirrorJoint(mirrorYZ = True, mirrorBehavior = True, searchReplace = ['Lt', 'Rt']);
+    cmds.select('Lt_Hip', 'Pelvis');
+    cmds.parent();
+    cmds.mirrorJoint(mirrorYZ = True, mirrorBehavior = True, searchReplace = ['Lt', 'Rt']);
+
+
+def box_control(*args):
+    #make a box
+    #place necessary curves
+    cmds.curve( d = 0, p=[(-1.5, -0.5, -1.5), (-1.5, -0.5, 1.5), (1.5, -0.5, 1.5), (1.5, -0.5, -1.5), (-1.5, -0.5, -1.5)] );
+    cmds.curve( d = 0, p=[(-1.5, 0.5, -1.5), (-1.5, 0.5, 1.5), (1.5, 0.5, 1.5), (1.5, 0.5, -1.5), (-1.5, 0.5, -1.5)] );
+    cmds.curve( d = 0, p=[(-1.5, -0.5, -1.5), (-1.5, 0.5, -1.5)] );
+    cmds.curve( d = 0, p=[(-1.5, -0.5, 1.5), (-1.5, 0.5, 1.5)] );
+    cmds.curve( d = 0, p=[(1.5, -0.5, 1.5), (1.5, 0.5, 1.5)] );
+    cmds.curve( d = 0, p=[(1.5, -0.5, -1.5), (1.5, 0.5, -1.5)] );
+   
+    
+    #Pull the box curves into one object
+    cmds.select(['curveShape2', 'curveShape3', 'curveShape4', 'curveShape5', 'curveShape6', 'curve1']);
+    cmds.parent( r = True, s = True);
+    cmds.delete('curve2', 'curve3', 'curve4', 'curve5', 'curve6');
+    cmds.select(['curve1']);
+    cmds.CenterPivot();
+
+boxJoints = ['Pelvis', 'Spine_A', 'Spine_B', 'Lt_Shoulder', 'Lt_Elbow', 'Lt_Wrist', 'Lt_Foot']
+nurbCircJoints = ['Neck','Lt_Thumb_End', 'Lt_Thumb_B', 'Lt_Thumb_A', 'Lt_Thumb_Base','Lt_Index_End', 'Lt_Index_B', 'Lt_Index_A', 'Lt_Index_Base',
+'Lt_Mid_End', 'Lt_Mid_B', 'Lt_Mid_A', 'Lt_Mid_Base','Lt_Ring_End', 'Lt_Ring_B', 'Lt_Ring_A', 'Lt_Ring_Base','Lt_Pinky_End', 'Lt_Pinky_B', 'Lt_Pinky_A', 'Lt_Pinky_Base']
+
+def place_controls(*args):
+    for dots in (boxJoints):
+        box_control();
+        cmds.select('curve1', dots);
+        cmds.parent();
+        cmds.select('curve1');
+        cmds.move(0, 0, 0, a = True, ls = True);
+        cmds.rename(dots + '_ctrl');
+        cmds.parent(w = True);
+        #Freeze transforms
+        cmds.makeIdentity(apply = True);
+        
+    for jots in (nurbCircJoints):
+        cmds.circle();
+        cmds.select('nurbsCircle1', jots);
+        cmds.parent();
+        cmds.select('nurbsCircle1');
+        cmds.move(0, 0, 0, a = True, ls = True);
+        cmds.rename(jots + '_ctrl');
+        cmds.parent(w = True);
+        cmds.makeIdentity(apply = True);
+
+#theseControls = []
+
+#def parent_controls():
+    #hi :)
+
+
+#from maya import cmds    
+#make window
+cmds.window()
+cmds.columnLayout( columnAttach=('both', 5), rowSpacing=10, columnWidth=250 )
+cmds.button(['Place Locators'], c = joint_locators)
+cmds.button(['Place Joints'], c = loc_children)
+cmds.button(['Place Controls'], c = place_controls)
+#cmds.button(['Parent Control'], c = parent_controls);
+cmds.showWindow()
+print (jointLocators)
